@@ -13,6 +13,7 @@ export default function OpenReflection({ exercise, onResult }: Props) {
   const [feedback, setFeedback] = useState<string | null>(null);
   const [score, setScore] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
+  const [pasteMsg, setPasteMsg] = useState(false);
 
   const handleSubmit = async () => {
     if (answer.trim().length < 20 || loading) return;
@@ -60,14 +61,20 @@ export default function OpenReflection({ exercise, onResult }: Props) {
       <textarea
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
-        onPaste={(e) => e.preventDefault()}
-        onDrop={(e) => e.preventDefault()}
+        onPaste={(e) => { e.preventDefault(); setPasteMsg(true); setTimeout(() => setPasteMsg(false), 2500); }}
+        onDrop={(e) => { e.preventDefault(); setPasteMsg(true); setTimeout(() => setPasteMsg(false), 2500); }}
         placeholder="Schreibe deine Antwort hier... (mind. 20 Zeichen)"
         rows={5}
         disabled={feedback !== null}
         autoComplete="off"
         className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none disabled:bg-gray-50 mb-4"
       />
+
+      {pasteMsg && (
+        <p className="text-amber-600 text-xs mb-3 flex items-center gap-1.5 animate-pulse">
+          <span>⚠️</span> Einfügen ist nicht erlaubt — bitte schreibe deine Antwort selbst.
+        </p>
+      )}
 
       {!feedback ? (
         <button

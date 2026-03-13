@@ -21,6 +21,7 @@ export default function CaseStudy({ caseStudy, onResult }: Props) {
   const [error, setError] = useState('');
   const [scenarioExpanded, setScenarioExpanded] = useState(true);
   const [finished, setFinished] = useState(false);
+  const [pasteMsg, setPasteMsg] = useState(false);
 
   const questions = caseStudy.questions;
   const currentQuestion = currentStep > 0 ? questions[currentStep - 1] : null;
@@ -172,13 +173,19 @@ export default function CaseStudy({ caseStudy, onResult }: Props) {
             <textarea
               value={answers[currentQuestion.id] || ''}
               onChange={(e) => setAnswers((prev) => ({ ...prev, [currentQuestion.id]: e.target.value }))}
-              onPaste={(e) => e.preventDefault()}
-              onDrop={(e) => e.preventDefault()}
+              onPaste={(e) => { e.preventDefault(); setPasteMsg(true); setTimeout(() => setPasteMsg(false), 2500); }}
+              onDrop={(e) => { e.preventDefault(); setPasteMsg(true); setTimeout(() => setPasteMsg(false), 2500); }}
               disabled={hasFeedback || loading}
               placeholder="Schreibe deine Analyse hier..."
               autoComplete="off"
               className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:bg-gray-50 disabled:text-gray-600 resize-none"
             />
+
+            {pasteMsg && (
+              <p className="text-amber-600 text-xs mt-1.5 flex items-center gap-1.5 animate-pulse">
+                <span>⚠️</span> Einfügen ist nicht erlaubt — bitte schreibe deine Antwort selbst.
+              </p>
+            )}
 
             {error && (
               <p className="text-red-500 text-xs mt-1">{error}</p>
