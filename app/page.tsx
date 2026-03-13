@@ -33,7 +33,7 @@ export default function WelcomePage() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
           <div className="space-y-6">
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
-              <h3 className="font-semibold text-amber-800 mb-2">13 Aufgaben — wie in der Prüfung</h3>
+              <h3 className="font-semibold text-amber-800 mb-2">15 Aufgaben — wie in der Prüfung + Bonus</h3>
               <ul className="text-sm text-amber-700 space-y-1.5">
                 <li className="flex gap-2"><span>🔬</span><span><strong>Siedepunkte & H-Brücken</strong> — intermolekulare Kräfte vergleichen</span></li>
                 <li className="flex gap-2"><span>✅</span><span><strong>Richtig/Falsch</strong> — Aussagen über Amine beurteilen</span></li>
@@ -41,6 +41,7 @@ export default function WelcomePage() {
                 <li className="flex gap-2"><span>📝</span><span><strong>IUPAC & Nukleophilie</strong> — Nomenklatur und Erklärungen</span></li>
                 <li className="flex gap-2"><span>⚗️</span><span><strong>Synthesen</strong> — Gabriel, Grignard, Sandmeyer, Ozonolyse</span></li>
                 <li className="flex gap-2"><span>🧮</span><span><strong>Berechnungen</strong> — Ideales Gasgesetz & Stöchiometrie</span></li>
+                <li className="flex gap-2"><span>✏️</span><span><strong>Strichdarstellungen</strong> — Skelettformeln erkennen & analysieren</span></li>
               </ul>
               <div className="mt-3 pt-3 border-t border-amber-200 flex items-center gap-2 text-xs text-amber-600">
                 <span>⏱️</span>
@@ -72,7 +73,7 @@ export default function WelcomePage() {
             </button>
 
             <p className="text-xs text-gray-400 text-center">
-              Strukturiert wie die echte Prüfung — Aufgabe 1 bis 13 mit Strukturformeln.
+              Aufgabe 1–13 wie die echte Prüfung + 2 Bonus-Aufgaben zu Strichdarstellungen.
             </p>
           </div>
         </div>
