@@ -172,8 +172,11 @@ export default function CaseStudy({ caseStudy, onResult }: Props) {
             <textarea
               value={answers[currentQuestion.id] || ''}
               onChange={(e) => setAnswers((prev) => ({ ...prev, [currentQuestion.id]: e.target.value }))}
+              onPaste={(e) => e.preventDefault()}
+              onDrop={(e) => e.preventDefault()}
               disabled={hasFeedback || loading}
               placeholder="Schreibe deine Analyse hier..."
+              autoComplete="off"
               className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:bg-gray-50 disabled:text-gray-600 resize-none"
             />
 

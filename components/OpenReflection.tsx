@@ -60,9 +60,12 @@ export default function OpenReflection({ exercise, onResult }: Props) {
       <textarea
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
+        onPaste={(e) => e.preventDefault()}
+        onDrop={(e) => e.preventDefault()}
         placeholder="Schreibe deine Antwort hier... (mind. 20 Zeichen)"
         rows={5}
         disabled={feedback !== null}
+        autoComplete="off"
         className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none disabled:bg-gray-50 mb-4"
       />
 
