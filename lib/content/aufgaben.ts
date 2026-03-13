@@ -357,4 +357,64 @@ export const aufgaben: Aufgabe[] = [
       aiContext: 'Aufgabe 13 der Prüfung (6 Punkte). Teil a (2 Pt): Sandmeyer-Route Cumol → (HNO₃/H₂SO₄) → Nitrocumol → (H₂/Pd/C) → Aminocumol → (NaNO₂/HCl, T<5°C) → Diazoniumsalz → (CuCN, T>5°C) → Nitril B. Teil b (2 Pt): n(H₂) = ΔpV/(RT) = 3.8×10.0/(0.08314×323.15) = 1.414 mol. Teil c (2 Pt): n(Amin) = 1.414/2 = 0.707 mol, m = 0.707 × 149.12 = 105.4 g. Bewerte Rechenwege streng: korrekte Formel, Einheiten, Einsetzen, Ergebnis.',
     },
   },
+
+  // ============================================================
+  // AUFGABE 14: Strichdarstellungen erkennen (2 Punkte) – TrueFalseQuiz + SVGs
+  // ============================================================
+  {
+    id: 'aufgabe-14',
+    nummer: 14,
+    titel: 'Strichdarstellungen: Amine klassifizieren',
+    punkte: 2,
+    typ: 'true-false',
+    svg: 'aufgabe14',
+    data: {
+      id: 'a14-truefalse',
+      instruction: 'Betrachte die vier Strichdarstellungen (I–IV). Entscheide für jede Aussage, ob sie richtig oder falsch ist. (je 0.5 Punkte)',
+      statements: [
+        {
+          id: 'a14-s1',
+          statement: 'Verbindung I ist ein sekundäres Amin.',
+          isTrue: true,
+          explanation: 'Verbindung I (N-Methylbutylamin) hat am Stickstoff zwei C-Substituenten und ein H-Atom (R₁–NH–R₂). Das macht es zu einem sekundären Amin.',
+        },
+        {
+          id: 'a14-s2',
+          statement: 'Verbindung II ist ein sekundäres Amin, da zwei Methylgruppen am Stickstoff gebunden sind.',
+          isTrue: false,
+          explanation: 'Verbindung II (N,N-Dimethylethylamin) hat DREI C-Substituenten am Stickstoff (2× CH₃ + 1× C₂H₅). Es ist ein tertiäres Amin (R₃N), nicht sekundär. Die Klassifizierung richtet sich nach der Zahl der C-Substituenten am N, nicht nach der Grösse der Reste.',
+        },
+        {
+          id: 'a14-s3',
+          statement: 'Verbindung III ist ein Amid und daher praktisch nicht basisch.',
+          isTrue: true,
+          explanation: 'Verbindung III (Butanamid) hat eine C(=O)–NH₂-Gruppe. Das freie Elektronenpaar des Stickstoffs ist durch Mesomerie mit der Carbonylgruppe delokalisiert, wodurch die Basizität extrem gering ist (pKb ≈ 14).',
+        },
+        {
+          id: 'a14-s4',
+          statement: 'Verbindung IV ist ein tertiäres Amin, weil das Stickstoffatom an einem tertiären C-Atom gebunden ist.',
+          isTrue: false,
+          explanation: 'Verbindung IV (2-Aminobutan) ist ein primäres Amin (R–NH₂). Die Klassifizierung primär/sekundär/tertiär bezieht sich auf die Anzahl der C-Substituenten am Stickstoff, NICHT auf das C-Atom. Hier hat N nur einen C-Substituenten + 2 H → primäres Amin.',
+        },
+      ],
+    },
+  },
+
+  // ============================================================
+  // AUFGABE 15: Summenformel aus Strichdarstellung (2 Punkte) – OpenReflection + SVGs
+  // ============================================================
+  {
+    id: 'aufgabe-15',
+    nummer: 15,
+    titel: 'Strichdarstellungen: Summenformel und Analyse',
+    punkte: 2,
+    typ: 'open-reflection',
+    svg: 'aufgabe15',
+    data: {
+      id: 'a15-reflection',
+      question: 'Bestimme für beide dargestellten Verbindungen (X und Y) die Summenformel. Zähle dazu alle C-, H-, N- und O-Atome systematisch ab. Vergiss die impliziten H-Atome nicht! Benenne ausserdem die funktionellen Gruppen, die in jeder Verbindung enthalten sind.',
+      aiContext: 'Aufgabe 15 (2 Punkte, je 1 pro Verbindung). Verbindung X: 4-Amino-2-pentanon. Skelettformel zeigt 5 C-Atome in Zickzack, C=O an C2, NH₂ an C4. Summenformel: C₅H₁₁NO. Systematisch: C1(3H) + C2(0H, =O) + C3(2H) + C4(1H, NH₂) + C5(3H) = 5C, 11H, 1N, 1O. Funktionelle Gruppen: Ketogruppe (C=O) und primäre Aminogruppe (–NH₂). Verbindung Y: N-Ethyl-3-aminophenol. Benzolring (6C) + OH an C1 + NH an C3 + Ethylkette (2C) am N. Summenformel: C₈H₁₁NO. Systematisch: Ring 6C (4 ring-H, da 2 Positionen substituiert) + Ethyl 2C(5H) + NH(1H) + OH(1H) = 8C, 11H, 1N, 1O. Funktionelle Gruppen: Phenolgruppe (Ar–OH), sekundäre Aminogruppe (Ar–NH–R). Bewerte: korrekte Summenformeln (je 0.5 Pt) und korrekte funktionelle Gruppen (je 0.5 Pt).',
+      hint: 'Denke daran: In Strichdarstellungen sind C-Atome an jedem Knick und Ende implizit. Jedes C-Atom braucht 4 Bindungen – fehlende werden mit H aufgefüllt.',
+    },
+  },
 ];

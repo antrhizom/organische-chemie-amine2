@@ -269,3 +269,117 @@ export const cumolSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18
   <!-- Labels -->
   <text x="75" y="95" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Cumol (A)</text>
 </svg>`;
+
+// ============================================================
+// AUFGABE 14: Strichdarstellungen erkennen (4 Amine)
+// ============================================================
+
+// I: N-Methylbutylamin (sekundäres Amin) — CH₃NH(CH₂)₃CH₃
+export const nMethylbutylaminSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 90" width="240" height="90">
+  <!-- Left methyl -->
+  <line x1="10" y1="55" x2="40" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- NH -->
+  <line x1="40" y1="35" x2="68" y2="50" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="60" y="62" font-family="sans-serif" font-size="14" fill="#2563eb" font-weight="bold">NH</text>
+  <!-- Butyl chain: 4C zigzag -->
+  <line x1="78" y1="50" x2="105" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="105" y1="35" x2="135" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="135" y1="55" x2="165" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="165" y1="35" x2="195" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="100" y="82" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">I</text>
+</svg>`;
+
+// II: N,N-Dimethylethylamin (tertiäres Amin) — (CH₃)₂N–CH₂CH₃
+export const dimethylethylaminSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 110" width="200" height="110">
+  <!-- N center -->
+  <text x="85" y="55" font-family="sans-serif" font-size="16" fill="#2563eb" font-weight="bold" text-anchor="middle">N</text>
+  <!-- Methyl 1 (top-left) -->
+  <line x1="78" y1="43" x2="50" y2="22" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Methyl 2 (bottom-left) -->
+  <line x1="78" y1="57" x2="50" y2="78" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Ethyl (right) -->
+  <line x1="95" y1="50" x2="125" y2="38" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="125" y1="38" x2="155" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="95" y="100" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">II</text>
+</svg>`;
+
+// III: Butanamid (Amid) — CH₃CH₂CH₂–C(=O)–NH₂
+export const butanamidSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+  <!-- Propyl chain -->
+  <line x1="10" y1="55" x2="40" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="35" x2="70" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="55" x2="100" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Carbonyl C -->
+  <line x1="100" y1="35" x2="130" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- C=O double bond -->
+  <line x1="130" y1="55" x2="130" y2="82" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <line x1="134" y1="55" x2="134" y2="82" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="125" y="96" font-family="sans-serif" font-size="13" fill="#dc2626" font-weight="bold">O</text>
+  <!-- NH₂ -->
+  <line x1="130" y1="55" x2="160" y2="40" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="163" y="42" font-family="sans-serif" font-size="13" fill="#2563eb" font-weight="bold">NH₂</text>
+  <!-- Label -->
+  <text x="100" y="14" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">III</text>
+</svg>`;
+
+// IV: 2-Aminobutan (primäres Amin) — CH₃CH(NH₂)CH₂CH₃
+export const aminobutanSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" width="220" height="110">
+  <!-- Butan chain: 4C zigzag -->
+  <line x1="10" y1="55" x2="40" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="35" x2="70" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="55" x2="100" y2="35" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="100" y1="35" x2="130" y2="55" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- NH₂ branch at C2 (position 40,35) -->
+  <line x1="70" y1="55" x2="70" y2="82" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="58" y="97" font-family="sans-serif" font-size="13" fill="#2563eb" font-weight="bold">NH₂</text>
+  <!-- Label -->
+  <text x="70" y="15" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">IV</text>
+</svg>`;
+
+// ============================================================
+// AUFGABE 15: Summenformel aus Strichdarstellung
+// ============================================================
+
+// Verbindung X: 4-Amino-2-pentanon — CH₃–C(=O)–CH₂–CH(NH₂)–CH₃
+export const aminopentanonSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" width="260" height="120">
+  <!-- Pentan chain -->
+  <line x1="10" y1="60" x2="40" y2="40" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="40" x2="70" y2="60" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="60" x2="100" y2="40" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="100" y1="40" x2="130" y2="60" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="130" y1="60" x2="160" y2="40" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- C=O at C2 (position 40,40) -->
+  <line x1="40" y1="40" x2="40" y2="12" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="40" x2="44" y2="12" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="35" y="8" font-family="sans-serif" font-size="13" fill="#dc2626" font-weight="bold">O</text>
+  <!-- NH₂ at C4 (position 100,40) -->
+  <line x1="100" y1="40" x2="100" y2="12" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="88" y="8" font-family="sans-serif" font-size="13" fill="#2563eb" font-weight="bold">NH₂</text>
+  <!-- C numbering -->
+  <text x="5" y="75" font-family="sans-serif" font-size="10" fill="#9ca3af">1</text>
+  <text x="38" y="30" font-family="sans-serif" font-size="10" fill="#9ca3af">2</text>
+  <text x="68" y="75" font-family="sans-serif" font-size="10" fill="#9ca3af">3</text>
+  <text x="108" y="35" font-family="sans-serif" font-size="10" fill="#9ca3af">4</text>
+  <text x="128" y="75" font-family="sans-serif" font-size="10" fill="#9ca3af">5</text>
+  <text x="80" y="110" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Verbindung X</text>
+</svg>`;
+
+// Verbindung Y: N-Ethyl-3-aminophenol — Phenol ring + NH–CH₂CH₃ substituent
+export const aminophenolSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 130" width="260" height="130">
+  <!-- Benzol ring -->
+  <polygon points="60,30 90,20 120,30 120,60 90,70 60,60" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <circle cx="90" cy="45" r="13" fill="none" stroke="#1f2937" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- OH at C1 (position 90,20 = top) -->
+  <line x1="90" y1="20" x2="90" y2="2" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="82" y="-2" font-family="sans-serif" font-size="13" fill="#dc2626" font-weight="bold">OH</text>
+  <!-- NH at C3 (position 120,60 = bottom-right) -->
+  <line x1="120" y1="60" x2="148" y2="75" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="140" y="88" font-family="sans-serif" font-size="14" fill="#2563eb" font-weight="bold">NH</text>
+  <!-- Ethyl on N -->
+  <line x1="162" y1="78" x2="185" y2="65" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <line x1="185" y1="65" x2="210" y2="78" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <!-- Labels -->
+  <text x="90" y="118" font-family="sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Verbindung Y</text>
+</svg>`;

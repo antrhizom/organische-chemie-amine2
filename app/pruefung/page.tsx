@@ -45,6 +45,12 @@ import {
   verbindungBSvg,
   lsdSvg,
   cumolSvg,
+  nMethylbutylaminSvg,
+  dimethylethylaminSvg,
+  butanamidSvg,
+  aminobutanSvg,
+  aminopentanonSvg,
+  aminophenolSvg,
 } from '@/lib/molecules';
 
 const TIMER_DURATION_MS = 90 * 60 * 1000; // 90 Minuten
@@ -123,6 +129,28 @@ function Aufgabe13Molecule() {
   return (
     <div className="my-4 p-4 bg-gray-50 rounded-xl">
       <MoleculeDisplay svg={cumolSvg} label="Isopropylbenzol (Cumol) — Verbindung A" />
+    </div>
+  );
+}
+
+// SVG for Aufgabe 14 (Strichdarstellungen klassifizieren)
+function Aufgabe14Molecules() {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-4 p-4 bg-gray-50 rounded-xl">
+      <MoleculeDisplay svg={nMethylbutylaminSvg} label="I" />
+      <MoleculeDisplay svg={dimethylethylaminSvg} label="II" />
+      <MoleculeDisplay svg={butanamidSvg} label="III" />
+      <MoleculeDisplay svg={aminobutanSvg} label="IV" />
+    </div>
+  );
+}
+
+// SVG for Aufgabe 15 (Summenformel bestimmen)
+function Aufgabe15Molecules() {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 p-4 bg-gray-50 rounded-xl">
+      <MoleculeDisplay svg={aminopentanonSvg} label="Verbindung X" sublabel="4-Amino-2-pentanon" />
+      <MoleculeDisplay svg={aminophenolSvg} label="Verbindung Y" sublabel="N-Ethyl-3-aminophenol" />
     </div>
   );
 }
@@ -284,6 +312,8 @@ export default function PruefungPage() {
       case 7: return <Aufgabe7Molecules />;
       case 8: return <Aufgabe8Molecule />;
       case 13: return <Aufgabe13Molecule />;
+      case 14: return <Aufgabe14Molecules />;
+      case 15: return <Aufgabe15Molecules />;
       default: return null;
     }
   };
